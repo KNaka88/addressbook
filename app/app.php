@@ -27,7 +27,7 @@
         $new_contact->save();
         asort($_SESSION['list_of_contacts']);
 
-        return $app['twig']->render('/create_contact.html.twig', array('contacts' => Contact::getAll()));
+        return $app['twig']->render('/create_contact.html.twig', array('contact' => $new_contact));
     });
 
     $app->get('/show_contact', function() use ($app) {
