@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
         <title>Your Address Book</title>
     </head>
     <header>
@@ -11,9 +12,8 @@
         <h1>All Contact Lists</h1>
 
         {% for contact in contacts%}
-          </ul>
             <li>Name: {{ contact.getFullName() }} </li>
-            <ul>
+            <img src="images/{{contact.getImage()}}" />
               <li>Phone: {{ contact.getPhone()}}</li>
               <li>Address: {{ contact.getAddress()}}</li>
             </ul>

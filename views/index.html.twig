@@ -3,7 +3,6 @@
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link href="css/styles.css" rel="stylesheet" type="text/css">
-        <title>You Added New Contact!</title>
         <title>Your Address Book</title>
     </head>
     <header>
@@ -14,7 +13,7 @@
           <div class="well">
             <h1 class="jumbotron" id='main-title'>Create Your Address Book</h1>
             <div class="row">
-              <form action='/create_contact' method="post">
+              <form action='/create_contact' method="post" enctype = "multipart/form-data">
                 <div class='form-group'>
                   <div class='col-md-4'>
                     <label for='first_name'>First Name:</label>
@@ -46,20 +45,28 @@
                   </div>
                 </div>
 
+
+                <div class='form-group'>
+                  <div class="col-md-12">
+                      <input type ="file" name= "image">
+                  </div>
+                </div>
+
                 <div class='col-md-12'>
-                  <button class='btn btn-success btn-block'>Create New Contact</button>
+                  <button type='submit' class='btn btn-success btn-block'>Create New Contact</button>
                 </div>
               </form>
 
-              <div class='form-group'>
+
+              <!-- <div class='form-group'>
                 <div class="col-md-12">
                   <form action = "/upload" method = "POST" enctype = "multipart/form-data">
-                   <input type = "file" name = "image" />
-                   <button type= "submit" class='btn-'>Upload</button>
-                 </form>
-               </div>
+                    <input type = "file" name = "image" />
+                    <input type = "submit"/>
+                  </form>
+                </div>
               </div>
-
+ -->
 
 
               <div class='col-md-6'>

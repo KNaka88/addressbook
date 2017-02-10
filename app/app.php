@@ -23,7 +23,14 @@
 
 
     $app->post('/create_contact', function() use ($app) {
-        $new_contact = new Contact($_POST['first_name'], $_POST['middle_name'], $_POST['last_name'], $_POST['phone'], $_POST['address']);
+
+        $new_contact = new Contact($_POST['first_name'], $_POST['middle_name'],
+        $_POST['last_name'], $_POST['phone'], $_POST['address']);
+        if(empty(Contact::uploadImage())) {
+            $new_contact->setImage('noprofile.gif');
+        } else {
+            $new_contact->setImage(Contact::uploadImage());
+        }
         $new_contact->save();
         asort($_SESSION['list_of_contacts']);
 
@@ -53,12 +60,11 @@
         return $app['twig']->render('search_result.html.twig', array('results' => $tempArray));
     });
 
-    $app->post('/upload', function() use ($app){
-
-        Contact::uploadImage();
-
-        return $app['twig']->render('index.html.twig');
-    });
+    // $app->post('/upload', function() use ($app){
+    //
+    //     Contact::uploadImage();
+    //     return $app['twig']->render('index.html.twig');
+    // });
 
 
 

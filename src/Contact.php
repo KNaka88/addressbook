@@ -6,6 +6,7 @@ class Contact
     private $last_name;
     private $phone;
     private $address;
+    private $image;
 
     function __construct($first_name, $last_name, $middle_name, $phone, $address)
     {
@@ -14,6 +15,7 @@ class Contact
         $this->last_name = $last_name;
         $this->phone = $phone;
         $this->address = $address;
+        $this->image;
     }
 
     //GETTER and SETTER
@@ -69,6 +71,16 @@ class Contact
         $this->address = $new_address;
     }
 
+    function getImage()
+    {
+        return $this->image;
+    }
+
+    function setImage($new_image)
+    {
+        $this->image = $new_image;
+    }
+
     function getFullName()
     {
       return $this->first_name . ' ' . $this->middle_name . ' ' . $this->last_name;
@@ -113,12 +125,6 @@ class Contact
     }
 
 
-
-
-
-
-
-
     function save(){
       array_push($_SESSION['list_of_contacts'], $this);
     }
@@ -156,16 +162,13 @@ class Contact
           if(empty($errors)==true) {
              move_uploaded_file($file_tmp,"images/".$file_name);
              echo "Success";
-             $img = '<img id="'.$file_name.'" src="'."images/".$file_name.'">';
+             $img = $file_name;
+             return $img;
           }else{
              print_r($errors);
           }
        }
     }
-
-
-
-
 
 
 }

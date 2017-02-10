@@ -16,3 +16,9 @@ button {
   margin: 1.5rem;
   box-sizing: border-box;
 }
+
+img {
+  height: 100px;
+  width : auto;
+  border-radius: 100%;
+}

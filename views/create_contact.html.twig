@@ -12,6 +12,9 @@
         <h1>You added successfully!!</h1>
 
             <p>Name: {{ contact.getFullName() }}</p>
+
+            <img src="images/{{contact.getImage()}}" />
+
             <ul>
               <li>Phone: {{ contact.getPhone()}}</li>
               <li>Address: {{ contact.getAddress()}}</li>
