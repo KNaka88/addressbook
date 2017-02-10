@@ -13,7 +13,7 @@
 
         {% for contact in contacts%}
             <li>Name: {{ contact.getFullName() }} </li>
-            <img src="images/{{contact.getImage()}}" />
+            <img src="images/{{contact.getImage()}}" class='profile' />
               <li>Phone: {{ contact.getPhone()}}</li>
               <li>Address: {{ contact.getAddress()}}</li>
             </ul>

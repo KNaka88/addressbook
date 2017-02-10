@@ -1,3 +1,7 @@
+body {
+  background-image: url('../images/background.jpg');
+}
+
 h1 {
   color: red;
   text-align: center;
@@ -9,16 +13,21 @@ h1 {
 
 .well {
   background-color: #fff9fe;
-
+  opacity: 0.9;
 }
 
-button {
-  margin: 1.5rem;
-  box-sizing: border-box;
-}
-
-img {
+.profile {
   height: 100px;
   width : auto;
   border-radius: 100%;
+}
+
+.button-style {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+}
+
+.required {
+  color: red;
 }
