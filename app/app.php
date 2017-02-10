@@ -2,6 +2,7 @@
     date_default_timezone_set('America/Los_Angeles');
     require_once __DIR__."/../vendor/autoload.php";
     require_once __DIR__."/../src/Contact.php";
+    require_once __DIR__.'/../web/upload.php';
 
     $app = new Silex\Application();
     $app->register(new Silex\Provider\TwigServiceProvider(), array(
@@ -53,6 +54,12 @@
         return $app['twig']->render('search_result.html.twig', array('results' => $tempArray));
     });
 
+    $app->post('/upload', function() use ($app){
+
+        uploadImage();
+
+        return $app['twig']->render('index.html.twig');
+    });
 
 
 
