@@ -49,11 +49,14 @@ class Contact
 
     }
 
-    function save(){
-        array_push($_SESSION['list_of_contacts'], $this);      
-    }
     //FUNCTION
+    function save(){
+      array_push($_SESSION['list_of_contacts'], $this);
+    }
 
+    static function getAll(){
+      return $_SESSION['list_of_contacts'];
+    }
 
 
 

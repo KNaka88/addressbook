@@ -8,6 +8,18 @@
     </header>
     <body>
       <main>
+        <h1>GETALL</h1>
+        {% for contact in list_of_contacts %}
+          <ul>
+            <li>{{contact.getName}}</li>
+            <li>{{contact.getPhone}}</li>
+            <li>{{contact.getAddress}}</li>
+          </ul>
+        {% endfor %}
+
+        <a href='/'>
+        <button class='btn btn-info'>Back to Top</button>
+        </a>
       </main>
     </body>
     <footer>
