@@ -8,29 +8,16 @@
     </header>
     <body>
       <main>
-        <h1>Result</h1>
-        <ul>
-          {% set previous = false %}
-          {% for result in results %}
-            {% if previous|capitalize != result.getFirstName()|capitalize %}
-              {% if not loop.first %}
-                  </ul>
-              {% endif %}
-
+        <h1>Search Result</h1>
+          {% for result in results%}
+            </ul>
               <li>Name: {{ result.getFullName() }} </li>
               <ul>
-
-              <li>Phone: {{ result.getPhone()}}</li>
-              <li>Address: {{ result.getAddress()}}</li>
-
-            {% else %}
-              <li>Phone: {{ result.getPhone()}}</li>
-              <li>Address: {{ result.getAddress()}}</li>
-            {% endif %}
-
-            {% set previous = result.getFirstName() %}
+                <li>Phone: {{ result.getPhone()}}</li>
+                <li>Address: {{ result.getAddress()}}</li>
+              </ul>
+            <ul>
           {% endfor %}
-          </ul>
 
           <a href='/'>
               <button class='btn btn-info' >Back to Home</button>

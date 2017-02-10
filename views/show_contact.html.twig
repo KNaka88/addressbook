@@ -8,29 +8,17 @@
     </header>
     <body>
       <main>
-        <h1>GETALL</h1>
-        <ul>
-          {% set previous = false %}
-          {% for contact in contacts %}
-            {% if previous|capitalize != contact.getFirstName()|capitalize %}
-              {% if not loop.first %}
-                  </ul>
-              {% endif %}
+        <h1>All Contact Lists</h1>
 
-              <li>Name: {{ contact.getFullName() }} </li>
-              <ul>
-
-              <li>Phone: {{ contact.getPhone()}}</li>
-              <li>Address: {{ contact.getAddress()}}</li>
-
-            {% else %}
-              <li>Phone: {{ contact.getPhone()}}</li>
-              <li>Address: {{ contact.getAddress()}}</li>
-            {% endif %}
-
-            {% set previous = contact.getFirstName() %}
-          {% endfor %}
+        {% for contact in contacts%}
           </ul>
+            <li>Name: {{ contact.getFullName() }} </li>
+            <ul>
+              <li>Phone: {{ contact.getPhone()}}</li>
+              <li>Address: {{ contact.getAddress()}}</li>
+            </ul>
+          <ul>
+        {% endfor %}
 
         <a href='/'>
         <button class='btn btn-info'>Back to Top</button>
