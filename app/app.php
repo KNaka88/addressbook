@@ -17,14 +17,19 @@
 
     $app->get('/', function() use ($app) {
 
+
         return $app['twig']->render('index.html.twig');
     });
 
 
     $app->post('/create_contact', function() use ($app) {
         //After submitting the form, the new Contacts should be saved into the session under the key $_SESSION['list_of_contacts']
+        $new_contact = new Contact($_POST['name'], $_POST['phone'], $_POST['address']);
 
         //CALL SAVE()
+        $new_contact->save();
+        var_dump($_SESSION['list_of_contacts']);
+
         return "/create_contact";
         // return $app['twig']->render('/show_contact.html.twig', array('list_of_contacts' => $_SESSION['list_of_contacts']));
     });

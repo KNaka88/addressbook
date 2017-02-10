@@ -45,8 +45,15 @@ class Contact
         $this->address = $new_address;
     }
 
+    function createArray(){
+
+    }
+
+    function save(){
+        array_push($_SESSION['list_of_contacts'], $this);      
+    }
     //FUNCTION
-    
+
 
 
 
