@@ -2,13 +2,15 @@
 class Contact
 {
     private $first_name;
+    private $middle_name;
     private $last_name;
     private $phone;
     private $address;
 
-    function __construct($first_name, $last_name, $phone, $address)
+    function __construct($first_name, $last_name, $middle_name, $phone, $address)
     {
         $this->first_name = $first_name;
+        $this->middle_name = $middle_name;
         $this->last_name = $last_name;
         $this->phone = $phone;
         $this->address = $address;
@@ -23,6 +25,16 @@ class Contact
     function setFirstName($new_first_name)
     {
         $this->first_name = $new_first_name;
+    }
+
+    function getMiddleName()
+    {
+        return $this->middle_name;
+    }
+
+    function setMiddleName($new_middle_name)
+    {
+        $this->middle_name = $new_middle_name;
     }
 
     function getLastName()
