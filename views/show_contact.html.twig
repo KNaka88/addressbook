@@ -11,7 +11,8 @@
         <h1>GETALL</h1>
         {% for contact in list_of_contacts %}
           <ul>
-            <li>{{contact.getName}}</li>
+            <li>{{contact.getFirstName}}</li>
+            <li>{{contact.getLastName}}</li>
             <li>{{contact.getPhone}}</li>
             <li>{{contact.getAddress}}</li>
           </ul>

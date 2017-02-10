@@ -23,7 +23,7 @@
 
 
     $app->post('/create_contact', function() use ($app) {
-        $new_contact = new Contact($_POST['name'], $_POST['phone'], $_POST['address']);
+        $new_contact = new Contact($_POST['first_name'], $_POST['last_name'], $_POST['phone'], $_POST['address']);
         $new_contact->save();
 
         return $app['twig']->render('/show_contact.html.twig', array('list_of_contacts' => Contact::getAll()));
