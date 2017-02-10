@@ -2,24 +2,19 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <title>Your Address Book</title>
+        <title>You Added New Contact!</title>
     </head>
     <header>
     </header>
     <body>
       <main>
-        <h1>All Contact Lists</h1>
+        <h1>You added successfully!!</h1>
 
-        {% for contact in contacts%}
-          </ul>
-            <li>Name: {{ contact.getFullName() }} </li>
+            <p>Name: {{ contact.getFullName() }}</p>
             <ul>
               <li>Phone: {{ contact.getPhone()}}</li>
               <li>Address: {{ contact.getAddress()}}</li>
-            </ul>
-          <ul>
-        {% endfor %}
-
+            <ul>
         <a href='/'>
         <button class='btn btn-info'>Back to Top</button>
         </a>
