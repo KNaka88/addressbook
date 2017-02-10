@@ -1,0 +1,18 @@
+h1 {
+  color: red;
+  text-align: center;
+}
+
+#main-title {
+  background-color: #99f7ce;
+}
+
+.well {
+  background-color: #fff9fe;
+
+}
+
+button {
+  margin: 1.5rem;
+  box-sizing: border-box;
+}
