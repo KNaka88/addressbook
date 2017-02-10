@@ -50,6 +50,36 @@
           <form action='/delete_contacts' method='post'>
             <button type='submit' name='delete' class='btn btn-danger'>Delete All Contacts</button>
           </form>
+
+
+          <h3>Search</h3>
+          <form action='/search' method='post'>
+            <h5>Search by...</h5>
+            <div class='form-group'>
+              <div class='radio'>
+                <label>
+                  <input type='radio' name='search' value='search_by_name' checked>
+                  Name
+                </label>
+                <label>
+                  <input type='radio' name='search' value='search_by_phone'>
+                  Phone Number
+                </label>
+                <label>
+                  <input type='radio' name='search' value='search_by_address'>
+                  Address
+                </label>
+              </div>
+
+              <label for='text_search'>Type Here:</label>
+              <input type="text" name='text_search' id='text_search' class='form-control' required>
+
+              <button type='submit' class='btn btn-warning'>Search</button>
+            </div>
+          </form>
+
+
+
         </div> <!--END OF CONTAINER-->
       </main>
     </body>

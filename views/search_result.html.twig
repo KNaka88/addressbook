@@ -2,39 +2,39 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <title>Your Address Book</title>
+        <title>Search Result</title>
     </head>
     <header>
     </header>
     <body>
       <main>
-        <h1>GETALL</h1>
+        <h1>Result</h1>
         <ul>
           {% set previous = false %}
-          {% for contact in contacts %}
-            {% if previous|capitalize != contact.getFirstName()|capitalize %}
+          {% for result in results %}
+            {% if previous|capitalize != result.getFirstName()|capitalize %}
               {% if not loop.first %}
                   </ul>
               {% endif %}
 
-              <li>Name: {{ contact.getFullName() }} </li>
+              <li>Name: {{ result.getFullName() }} </li>
               <ul>
 
-              <li>Phone: {{ contact.getPhone()}}</li>
-              <li>Address: {{ contact.getAddress()}}</li>
+              <li>Phone: {{ result.getPhone()}}</li>
+              <li>Address: {{ result.getAddress()}}</li>
 
             {% else %}
-              <li>Phone: {{ contact.getPhone()}}</li>
-              <li>Address: {{ contact.getAddress()}}</li>
+              <li>Phone: {{ result.getPhone()}}</li>
+              <li>Address: {{ result.getAddress()}}</li>
             {% endif %}
 
-            {% set previous = contact.getFirstName() %}
+            {% set previous = result.getFirstName() %}
           {% endfor %}
           </ul>
 
-        <a href='/'>
-        <button class='btn btn-info'>Back to Top</button>
-        </a>
+          <a href='/'>
+              <button class='btn btn-info' >Back to Home</button>
+          </a>
       </main>
     </body>
     <footer>

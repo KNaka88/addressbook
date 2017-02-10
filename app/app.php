@@ -26,7 +26,7 @@
         $new_contact = new Contact($_POST['first_name'], $_POST['middle_name'], $_POST['last_name'], $_POST['phone'], $_POST['address']);
         $new_contact->save();
 
-        return $app['twig']->render('/show_contact.html.twig', array('list_of_contacts' => Contact::getAll()));
+        return $app['twig']->render('/show_contact.html.twig', array('contacts' => Contact::getAll()));
     });
 
 
@@ -36,6 +36,18 @@
         Contact::deleteAll();
         return $app['twig']->render('delete_contacts.html.twig');
     });
+
+
+    $app->post("/search", function() use ($app) {
+        $search_type =  $_POST['search'];
+        $search_value = '/.*' . $_POST['text_search'] . '.*/i';
+        $tempArray = Contact::search($search_type, $search_value);
+
+        return $app['twig']->render('search_result.html.twig', array('results' => $tempArray));
+    });
+
+
+
 
 
 
