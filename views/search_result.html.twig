@@ -14,8 +14,7 @@
               <div class='row'>
                 {% for result in results%}
                   <div class="col-md-4 profile-panel">
-                    </ul>
-                      <li>Name: {{ result.getFullName() }} </li>
+                      <p><span class="name-display">Name:</span> {{ result.getFullName() }}</p>
                       <img src="images/{{result.getImage()}}" class='profile' />
                       <ul>
                         <li>Phone: {{ result.getPhone()}}</li>

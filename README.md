@@ -10,26 +10,26 @@
 
 ## Specifications
 1. if user fill the form "First Name", "Middle Name", "Last Name", "Phone Number", "Address", "Profile Picture" and click "Create New Contact" button,
-⋅⋅* You will see "You added succsesfully!"
-⋅⋅* You will see the contact you just created
-..* Middle name and Profile Picture are optional
+  * You will see "You added succsesfully!"
+  * You will see the contact you just created
+  * Middle name and Profile Picture are optional
 
 2. if user create the contact and click the "Back to Top" page,
-..* You will back to top page
-..* if you add another contacts, contact lists are adding up
+  * You will back to top page
+  * if you add another contacts, contact lists are adding up
 
 3. if user click "See All Contacts" button,
-⋅⋅* You will see all contact lists.
-⋅⋅* You can go back to previous page as you click back to top button.
+  * You will see all contact lists.
+  * You can go back to previous page as you click back to top button.
 
 
 4. if user click "Delete All Contacts" button,
-⋅⋅* You will see "Deleted"
-⋅⋅* Your list of contacts are deleted
+  * You will see "Deleted"
+  * Your list of contacts are deleted
 
 5. if user click "Search" button,
-..* You can search from contact lists
-..* You can choose search based on name, phone#, and address
+  * You can search from contact lists
+  * You can choose search based on name, phone#, and address
 
 
 ## Setup/Installation Requirements

@@ -24,9 +24,14 @@ h1 {
 }
 
 .profile {
+  display: block;
   height: 100px;
   width : auto;
   border-radius: 100%;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
 }
 
 .button-style {
@@ -51,4 +56,8 @@ h1 {
 
 .profile-panel {
   height: 180px;
+}
+
+.name-display {
+  font-weight: bold;
 }

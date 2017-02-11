@@ -16,7 +16,7 @@
               <div class='row'>
                 {% for contact in contacts%}
                   <div class="col-md-4 profile-panel">
-                    <li>Name: {{ contact.getFullName() }} </li>
+                    <p><span class="name-display">Name:</span> {{ contact.getFullName() }}</p>
                     <img src="images/{{contact.getImage()}}" class='profile' />
                       <li>Phone: {{ contact.getPhone()}}</li>
                       <li>Address: {{ contact.getAddress()}}</li>
