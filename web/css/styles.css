@@ -11,7 +11,14 @@ h1 {
   background-color: #99f7ce;
 }
 
+.bottom-button {
+  margin-top: 3rem;
+}
+
 .well {
+  height: 930px;
+  padding: 19px;
+  margin-top: 10%;
   background-color: #fff9fe;
   opacity: 0.9;
 }
@@ -28,6 +35,20 @@ h1 {
   box-sizing: border-box;
 }
 
+.row {
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
 .required {
   color: red;
+}
+
+.col-md-4 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.profile-panel {
+  height: 180px;
 }

@@ -5,25 +5,30 @@
         <link href="css/styles.css" rel="stylesheet" type="text/css">
         <title>You Added New Contact!</title>
     </head>
-    <header>
-    </header>
     <body>
       <main>
-        <h1>You added successfully!!</h1>
-
-            <p>Name: {{ contact.getFullName() }}</p>
-
-            <img src="images/{{contact.getImage()}}" class='profile'>
-
-            <ul>
-              <li>Phone: {{ contact.getPhone()}}</li>
-              <li>Address: {{ contact.getAddress()}}</li>
-            <ul>
-        <a href='/'>
-        <button class='btn btn-info'>Back to Top</button>
-        </a>
+        <div class="container">
+          <div class='well'>
+            <h1>You added successfully!!</h1>
+            <div class="panel">
+              <div class="profile-panel">
+                <class='row'>
+                  <div class="col-md-12">
+                    <p>Name: {{ contact.getFullName() }}</p>
+                    <img src="images/{{contact.getImage()}}" class='profile'>
+                    <ul>
+                      <li>Phone: {{ contact.getPhone()}}</li>
+                      <li>Address: {{ contact.getAddress()}}</li>
+                    <ul>
+                  </div>
+                  <a href='/'>
+                  <button class='btn btn-info btn-block bottom-button'>Back to Top</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </body>
-    <footer>
-    </footer>
 </html>

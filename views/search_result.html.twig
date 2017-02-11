@@ -5,27 +5,33 @@
         <link href="css/styles.css" rel="stylesheet" type="text/css">
         <title>Search Result</title>
     </head>
-    <header>
-    </header>
     <body>
       <main>
-        <h1>Search Result</h1>
-          {% for result in results%}
-            </ul>
-              <li>Name: {{ result.getFullName() }} </li>
-              <img src="images/{{result.getImage()}}" class='profile' />
-              <ul>
-                <li>Phone: {{ result.getPhone()}}</li>
-                <li>Address: {{ result.getAddress()}}</li>
-              </ul>
-            <ul>
-          {% endfor %}
+        <div class="container">
+          <div class="well">
+            <h1>Search Result</h1>
+            <div class="panel">
+              <div class='row'>
+                {% for result in results%}
+                  <div class="col-md-4 profile-panel">
+                    </ul>
+                      <li>Name: {{ result.getFullName() }} </li>
+                      <img src="images/{{result.getImage()}}" class='profile' />
+                      <ul>
+                        <li>Phone: {{ result.getPhone()}}</li>
+                        <li>Address: {{ result.getAddress()}}</li>
+                      </ul>
+                    <ul>
+                  </div>
+                {% endfor %}
+              </div>
 
-          <a href='/'>
-              <button class='btn btn-info' >Back to Home</button>
-          </a>
+                <a href='/'>
+                  <button class='btn btn-info btn-block bottom-button' >Back to Home</button>
+                </a>
+              </div>
+            </div>
+        </div>
       </main>
     </body>
-    <footer>
-    </footer>
 </html>

@@ -9,22 +9,28 @@
     </header>
     <body>
       <main>
-        <h1>All Contact Lists</h1>
+        <div class="container">
+          <div class="well">
+            <h1>All Contact Lists</h1>
+            <div class="panel">
+              <div class='row'>
+                {% for contact in contacts%}
+                  <div class="col-md-4 profile-panel">
+                    <li>Name: {{ contact.getFullName() }} </li>
+                    <img src="images/{{contact.getImage()}}" class='profile' />
+                      <li>Phone: {{ contact.getPhone()}}</li>
+                      <li>Address: {{ contact.getAddress()}}</li>
+                    </ul>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
 
-        {% for contact in contacts%}
-            <li>Name: {{ contact.getFullName() }} </li>
-            <img src="images/{{contact.getImage()}}" class='profile' />
-              <li>Phone: {{ contact.getPhone()}}</li>
-              <li>Address: {{ contact.getAddress()}}</li>
-            </ul>
-          <ul>
-        {% endfor %}
-
-        <a href='/'>
-        <button class='btn btn-info'>Back to Top</button>
-        </a>
+            <a href='/'>
+            <button class='btn btn-info btn-block bottom-button'>Back to Top</button>
+            </a>
+          </div>
+        </div>
       </main>
     </body>
-    <footer>
-    </footer>
 </html>
