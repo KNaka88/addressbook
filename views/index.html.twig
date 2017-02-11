@@ -2,6 +2,7 @@
 <html>
   <head>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
       <link href="css/styles.css" rel="stylesheet" type="text/css">
       <title>Your Address Book</title>
   </head>
@@ -70,39 +71,41 @@
             </div>
           </div><!--End of Row-->
 
-          <div class='row'>
-            <div class="col-md-12">
-              <h3>Search</h3>
-                <h5>Search by...</h5>
-            </div>
-            <form action='/search' method='post'>
+          <div id='search-bar'>
+            <div class='row'>
               <div class="col-md-12">
-                <div class='form-group'>
-                  <div class='radio'>
-                    <label>
-                      <input type='radio' name='search' value='search_by_name' checked>
-                      Name
-                    </label>
-                    <label>
-                      <input type='radio' name='search' value='search_by_phone'>
-                      Phone Number
-                    </label>
-                    <label>
-                      <input type='radio' name='search' value='search_by_address'>
-                      Address
-                    </label>
+                <h3>Search</h3>
+                  <h5>Search by...</h5>
+              </div>
+              <form action='/search' method='post'>
+                <div class="col-md-12">
+                  <div class='form-group'>
+                    <div class='radio'>
+                      <label>
+                        <input type='radio' name='search' value='search_by_name' checked>
+                        Name
+                      </label>
+                      <label>
+                        <input type='radio' name='search' value='search_by_phone'>
+                        Phone Number
+                      </label>
+                      <label>
+                        <input type='radio' name='search' value='search_by_address'>
+                        Address
+                      </label>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-12">
-                <label for='text_search'>Type Here:</label>
-                <input type="text" name='text_search' id='text_search' class='form-control' required>
-              </div>
-              <div class="col-md-12 button-style">
-                <button type='submit' class='btn btn-warning btn-block'>Search</button>
-              </div>
-            </form>
-          </div><!--End of Row-->
+                <div class="col-md-12">
+                  <label for='text_search'>Type Here:</label>
+                  <input type="text" name='text_search' id='text_search' class='form-control' required>
+                </div>
+                <div class="col-md-12 button-style">
+                  <button type='submit' class='btn btn-warning btn-block'>Search</button>
+                </div>
+              </form>
+            </div><!--End of Row-->
+          </div>
         </div><!--End of Well-->
       </div> <!--END OF CONTAINER-->
     </main>

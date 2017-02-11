@@ -3,7 +3,8 @@ body {
 }
 
 h1 {
-  color: red;
+  font-size: 6rem;
+  font-family: 'Acme', sans-serif;
   text-align: center;
 }
 
@@ -54,10 +55,24 @@ h1 {
   margin-bottom: 3rem;
 }
 
+.col-md-12 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .profile-panel {
   height: 180px;
 }
 
 .name-display {
   font-weight: bold;
+}
+
+#search-bar {
+  margin-top: 2rem;
+  border-top: 1px solid lightgrey;
+}
+
+.radio label {
+  margin-right: 2rem;
 }
