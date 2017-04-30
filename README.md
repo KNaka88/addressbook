@@ -1,5 +1,3 @@
-#Koji Nakagawa
-
 #### PHP 1st Week Independent Project for Epicodus, 2.10.2017
 
 #### By Koji Nakagawa
@@ -34,7 +32,11 @@
 
 ## Setup/Installation Requirements
 * Clone this repository.
+
+* run `composer install --prefer-source --no-interaction` from project root
+
 * Start your server inside of web folder, using localhost:8000
+
 * Open URL: http://localhost:8000/
 
 if you are not sure how to setup localhost server, [see this link](https://www.learnhowtoprogram.com/php/php-basics/meet-the-server).
