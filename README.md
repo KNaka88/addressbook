@@ -6,45 +6,24 @@
 * This website is the first independent project for Epicodus "PHP" class.
 * This website takes the user input from form and create the contact lists, using Twig.
 
-## Specifications
-1. if user fill the form "First Name", "Middle Name", "Last Name", "Phone Number", "Address", "Profile Picture" and click "Create New Contact" button,
-  * You will see "You added succsesfully!"
-  * You will see the contact you just created
-  * Middle name and Profile Picture are optional
+![sample image](/web/images/image1.png)
+![sample image](/web/images/image2.png)
 
-2. if user create the contact and click the "Back to Top" page,
-  * You will back to top page
-  * if you add another contacts, contact lists are adding up
+## Prerequisites
+You will need the following things properly installed on your computer.
 
-3. if user click "See All Contacts" button,
-  * You will see all contact lists.
-  * You can go back to previous page as you click back to top button.
-
-
-4. if user click "Delete All Contacts" button,
-  * You will see "Deleted"
-  * Your list of contacts are deleted
-
-5. if user click "Search" button,
-  * You can search from contact lists
-  * You can choose search based on name, phone#, and address
-
+* [Git](https://git-scm.com/)
+* [Composer](https://getcomposer.org/)
 
 ## Setup/Installation Requirements
-* Clone this repository.
-
-* run `composer install --prefer-source --no-interaction` from project root
-
-* Start your server inside of web folder, using localhost:8000
-
-* Open URL: http://localhost:8000/
-
-if you are not sure how to setup localhost server, [see this link](https://www.learnhowtoprogram.com/php/php-basics/meet-the-server).
-
+1. Clone this repository.
+2. `composer install` at the top level of project directory
+3. on the web folder, `php -S localhost:8000`
+4. Open URL: http://localhost:8000/
 
 ## Known Bugs
 * I confirmed this program is successfully running under the PHP 5.6.16, using Mac OS X 10.11.6.
-* If you found some errors, please let me know. Any suggentions are highly appreciated.
+* Some layout collapse might occur
 
 ## Technologies Used
 * HTML
